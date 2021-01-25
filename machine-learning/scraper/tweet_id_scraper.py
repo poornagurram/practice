@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
 import pandas as pd
 
@@ -12,7 +11,6 @@ for tid in tweet_ids[:5]:
     url = f'https://twitter.com/anyuser/status/{tid}'
     time.sleep(2)
     browser.get(url)
-    time.sleep(1)
     tweets = browser.find_elements_by_xpath("//*[@id=\"react-root\"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/section/div/div/div[1]/div/div/article/div/div/div/div[3]/div[1]")
     if tweets:
         for tweet in tweets:
