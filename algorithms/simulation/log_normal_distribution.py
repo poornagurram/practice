@@ -11,14 +11,6 @@ def get_dist_params(mu_x, sig_x):
     sig_dist = sqrt(log(1+sig_x**2/mu_x**2))
     return mu_dist, sig_dist
 
-def expiry(x):
-    from datetime import datetime
-    current = datetime.now()
-    delta = (current-x).total_seconds()
-    if int(delta/(60*60*24)) > 180:
-        return False
-    else:
-        return True
 
 if __name__ == '__main__':
     mu_dist, sig_dist = get_dist_params(45, 10)
@@ -27,4 +19,3 @@ if __name__ == '__main__':
     print(f"mean {vals.mean()}, standard deviation : {vals.std()}")
     plt.hist(vals, 15)
     plt.show()
-    expiry("")
