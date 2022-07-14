@@ -1,0 +1,4 @@
+1. Create a language model which helps turn a negative sentence to a positive sentence
+2. Robust Python
+3. Work on open classification
+4. ML Cloud Certification 
